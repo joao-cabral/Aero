@@ -7,7 +7,18 @@ aviao* criar_aviao(char codigo[7],int numero_p, char capitao[20]){
 }//JOAO
 
 aviao* check_list(aviao **inicio,char codigo[7]){
+    aviao *aux = (*inicio);
+    int booleano = 0;
 
+    while(aux != NULL){
+        if(strcmp(aux->codigo, codigo) == 1){
+            remover(codigo);
+            booleano = 1;
+        }
+    }
+    if(booleano == 0){
+        printf("CODIGO NÃO ENCONTRADO!\n");
+    }
 }// JOAO C
 
 aviao* remove_vooLista(aviao **inicio,char codigo[7]){
