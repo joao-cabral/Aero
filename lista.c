@@ -11,7 +11,7 @@ aviao* check_list(aviao **inicio,char codigo[7]){
     int booleano = 0;
 
     while(aux != NULL){
-        if(strcmp(aux->codigo, codigo) == 1){
+        if(strcmp(aux->codigo, codigo) == 0){
             remover(codigo);
             booleano = 1;
         }
